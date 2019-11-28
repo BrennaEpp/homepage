@@ -14,7 +14,7 @@
 export default {
   name: "Error404",
   mounted() {
-    document.title = "404 | BE";
+    document.title = "404 | Brenna Epp";
   }
 };
 </script>
@@ -29,11 +29,12 @@ export default {
 }
 .content {
   position: absolute;
-  top: 38%;
-  right: 20%;
+  top: 28%;
+  right: 18%;
 }
 .curved-start {
   // to visually line up curved letters
+  // nevermind, I kind of like the effect of over
   margin-left: -100px;
 }
 </style>

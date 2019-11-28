@@ -10,7 +10,7 @@
 export default {
   name: "LayoutDefault",
   mounted() {
-    document.title = "BE";
+    document.title = "Brenna Epp";
   }
 };
 </script>

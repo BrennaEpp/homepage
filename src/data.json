@@ -5,5 +5,6 @@
         { "title": "sd", "description": "Mobile app maker" },
         { "title": "Quasar1", "description": "Framework of components1" },
         { "title": "Cordova1", "description": "Mobile app maker1" }
-    ]
+    ],
+    "resume": "var add = { 'aa' : 2}; "
 }
