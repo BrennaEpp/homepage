@@ -1,0 +1,9 @@
+{
+    "about" : "Into",
+    "skills": [
+        { "title": "AAAA", "description": "Framework of components" },
+        { "title": "sd", "description": "Mobile app maker" },
+        { "title": "Quasar1", "description": "Framework of components1" },
+        { "title": "Cordova1", "description": "Mobile app maker1" }
+    ]
+}

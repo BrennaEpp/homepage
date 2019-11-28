@@ -12,6 +12,12 @@ const routes = [
   }
 ];
 
+// Always leave this as last one
+routes.push({
+  path: "*",
+  component: () => import("../views/Error404.vue")
+});
+
 const router = new VueRouter({
   routes
 });

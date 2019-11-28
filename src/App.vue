@@ -8,6 +8,9 @@
 
 <script>
 export default {
-  name: "LayoutDefault"
+  name: "LayoutDefault",
+  mounted() {
+    document.title = "BE";
+  }
 };
 </script>
