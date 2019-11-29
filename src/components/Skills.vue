@@ -4,21 +4,107 @@
       <span class="text-h3">Skills</span>
     </q-card-section>
     <q-separator inset />
-    <q-card-section class="row q-pa-md">
-      <q-list bordered separator>
+    <q-card-section class="row q-pa-md q-gutter-lg justify-between">
+      <q-list class="col-grow col-7">
+        <q-item-label header class="text-dark">Why</q-item-label>
         <q-expansion-item
+          class="text-accent"
           dense
-          group="items"
-          v-for="(item, index) in items"
+          group="skills.softskills"
+          v-for="(item, index) in skills.softskills"
           :key="index"
           clickable
-          v-ripple
           @click="chosen = item"
           :label="item.title"
         >
-          <q-card class="bg-grey-4">
+          <q-card class="text-black bg-grey-12">
             <q-card-section>
               {{ item.description }}
+              {{ item.details }}
+            </q-card-section>
+          </q-card>
+        </q-expansion-item>
+      </q-list>
+
+      <q-list class="col-grow col-6 col-md-5">
+        <q-item-label header class="text-dark">Languages</q-item-label>
+        <q-expansion-item
+          class="text-accent"
+          dense
+          group="skills.languages"
+          v-for="(item, index) in skills.languages"
+          :key="index"
+          clickable
+          @click="chosen = item"
+          :label="item.title"
+        >
+          <q-card class="text-black bg-grey-12">
+            <q-card-section>
+              {{ item.description }}
+              {{ item.details }}
+            </q-card-section>
+          </q-card>
+        </q-expansion-item>
+      </q-list>
+
+      <q-list class="col-grow col-6 col-md-5">
+        <q-item-label header class="text-dark">Frameworks</q-item-label>
+        <q-expansion-item
+          class="text-accent"
+          dense
+          group="skills.frameworks"
+          v-for="(item, index) in skills.frameworks"
+          :key="index"
+          clickable
+          @click="chosen = item"
+          :label="item.title"
+        >
+          <q-card class="text-black bg-grey-12">
+            <q-card-section>
+              {{ item.description }}
+              {{ item.details }}
+            </q-card-section>
+          </q-card>
+        </q-expansion-item>
+      </q-list>
+
+      <q-list class="col-grow col-6 col-md-5">
+        <q-item-label header class="text-dark">Tools</q-item-label>
+        <q-expansion-item
+          class="text-accent"
+          dense
+          group="skills.tools"
+          v-for="(item, index) in skills.tools"
+          :key="index"
+          clickable
+          @click="chosen = item"
+          :label="item.title"
+        >
+          <q-card class="text-black bg-grey-12">
+            <q-card-section>
+              {{ item.description }}
+              {{ item.details }}
+            </q-card-section>
+          </q-card>
+        </q-expansion-item>
+      </q-list>
+
+      <q-list class="col-grow col-6 col-md-5">
+        <q-item-label header class="text-dark">Miscellaneous</q-item-label>
+        <q-expansion-item
+          class="text-accent"
+          dense
+          group="skills.other"
+          v-for="(item, index) in skills.other"
+          :key="index"
+          clickable
+          @click="chosen = item"
+          :label="item.title"
+        >
+          <q-card class="text-black bg-grey-12">
+            <q-card-section>
+              <p>{{ item.description }}</p>
+              <p>{{ item.details }}</p>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -34,17 +120,9 @@ export default {
   name: "Skills",
   data() {
     return {
-      items: skills.languages,
+      skills: skills,
       chosen: null
     };
-  },
-  computed: {
-    firstList() {
-      return this.items.slice(0, this.items.length / 2);
-    },
-    secondList() {
-      return this.items.slice(this.items.length / 2);
-    }
   }
 };
 </script>
@@ -52,9 +130,5 @@ export default {
 <style lang="scss" scoped>
 .chosen-item {
   background-color: azure;
-}
-.description {
-  background-color: azure;
-  min-width: 50%;
 }
 </style>

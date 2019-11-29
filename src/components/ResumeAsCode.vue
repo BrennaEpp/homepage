@@ -1,5 +1,5 @@
 <template>
-  <q-card flat>
+  <q-card>
     <q-card-section class="q-pa-xl">
       <prism lang="javascript" :code="code" />
     </q-card-section>

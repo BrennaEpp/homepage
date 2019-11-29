@@ -82,12 +82,15 @@ export default {
       }, 50);
     },
     linkSelectedTabToScrollPos() {
-      var tabs=["home","about","skills","contact"]
+      var tabs = ["home", "about", "skills", "contact"];
       for (let tab of tabs) {
-        if (this.$refs[tab] && window.scrollY + window.innerHeight/2 > this.$refs[tab].$el.offsetTop) {
+        if (
+          this.$refs[tab] &&
+          window.scrollY + window.innerHeight / 2 >
+            this.$refs[tab].$el.offsetTop
+        ) {
           this.tab = tab;
-        }
-        else {
+        } else {
           break;
         }
       }

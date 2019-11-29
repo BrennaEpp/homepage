@@ -29,11 +29,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
+@import '../styles/quasar.variables'
+
 .left-panel {
   height: 100%;
   position: fixed;
-  background-color: black;
+  background-color: alpha($dark, 0.3);
   z-index: 1000;
 }
 </style>
