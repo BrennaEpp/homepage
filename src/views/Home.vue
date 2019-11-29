@@ -60,9 +60,10 @@ export default {
     handleWindowResize() {
       this.$refs.home.$el.style.height =
         window.innerHeight - this.navHeight + "px";
+      this.navHeight = this.$refs.nav.$el.offsetHeight;
     },
     handleScroll() {
-      // TO-DO: link tab selected to scroll area
+      // TO-DO: smooth out scrolling
       setTimeout(() => {
         if (
           !this.sticky &&
@@ -77,7 +78,19 @@ export default {
           this.$refs.nav.$el.classList.remove("sticky");
           this.sticky = false;
         }
+        this.linkSelectedTabToScrollPos();
       }, 50);
+    },
+    linkSelectedTabToScrollPos() {
+      var tabs=["home","about","skills","contact"]
+      for (let tab of tabs) {
+        if (this.$refs[tab] && window.scrollY + window.innerHeight/2 > this.$refs[tab].$el.offsetTop) {
+          this.tab = tab;
+        }
+        else {
+          break;
+        }
+      }
     },
     scrollTo(ref) {
       this.$refs[ref].$el.scrollIntoView();
