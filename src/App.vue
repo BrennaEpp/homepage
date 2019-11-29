@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
       <transition :name="transitionName">
-        <router-view class="transition-page"/>
+        <router-view class="transition-page" />
       </transition>
     </q-page-container>
   </q-layout>
@@ -34,14 +34,16 @@ export default {
 <style>
 .transition-page {
   position: absolute;
-  transition: all .3s cubic-bezier(.55,0,.1,1);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
-.slide-left-enter, .slide-right-leave-active {
+.slide-left-enter,
+.slide-right-leave-active {
   opacity: 0;
   -webkit-transform: translate(30px, 0);
   transform: translate(30px, 0);
 }
-.slide-left-leave-active, .slide-right-enter {
+.slide-left-leave-active,
+.slide-right-enter {
   opacity: 0;
   -webkit-transform: translate(-30px, 0);
   transform: translate(-30px, 0);

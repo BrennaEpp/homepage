@@ -16,11 +16,13 @@
           clickable
           @click="chosen = item"
           :label="item.title"
+          :aria-expanded="chosen === item"
+          role="button"
         >
           <q-card class="text-black bg-grey-12">
             <q-card-section>
-              {{ item.description }}
-              {{ item.details }}
+              <p>{{ item.description }}</p>
+              <p>{{ item.details }}</p>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -37,11 +39,13 @@
           clickable
           @click="chosen = item"
           :label="item.title"
+          :aria-expanded="chosen === item"
+          role="button"
         >
           <q-card class="text-black bg-grey-12">
             <q-card-section>
-              {{ item.description }}
-              {{ item.details }}
+              <p>{{ item.description }}</p>
+              <p>{{ item.details }}</p>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -52,17 +56,19 @@
         <q-expansion-item
           class="text-accent"
           dense
-          group="skills.frameworks"
-          v-for="(item, index) in skills.frameworks"
+          group="skills.tools"
+          v-for="(item, index) in skills.tools"
           :key="index"
           clickable
           @click="chosen = item"
           :label="item.title"
+          :aria-expanded="chosen === item"
+          role="button"
         >
           <q-card class="text-black bg-grey-12">
             <q-card-section>
-              {{ item.description }}
-              {{ item.details }}
+              <p>{{ item.description }}</p>
+              <p>{{ item.details }}</p>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -73,17 +79,19 @@
         <q-expansion-item
           class="text-accent"
           dense
-          group="skills.tools"
-          v-for="(item, index) in skills.tools"
+          group="skills.frameworks"
+          v-for="(item, index) in skills.frameworks"
           :key="index"
           clickable
           @click="chosen = item"
           :label="item.title"
+          :aria-expanded="chosen === item"
+          role="button"
         >
           <q-card class="text-black bg-grey-12">
             <q-card-section>
-              {{ item.description }}
-              {{ item.details }}
+              <p>{{ item.description }}</p>
+              <p>{{ item.details }}</p>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -100,6 +108,8 @@
           clickable
           @click="chosen = item"
           :label="item.title"
+          :aria-expanded="chosen === item"
+          role="button"
         >
           <q-card class="text-black bg-grey-12">
             <q-card-section>
@@ -124,11 +134,7 @@ export default {
       chosen: null
     };
   }
+  // TO-DO: make accordions ARIA-complacent:
+  // https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
 };
 </script>
-
-<style lang="scss" scoped>
-.chosen-item {
-  background-color: azure;
-}
-</style>

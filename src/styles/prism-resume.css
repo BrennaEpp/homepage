@@ -38,10 +38,10 @@ pre[class*="language-"] code {
 	padding: 0 15px 0 0;
 }
 
-pre[class*="language-"],
+/* pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
 	background: #222;
-}
+} */
 
 /* Code blocks */
 pre[class*="language-"] {

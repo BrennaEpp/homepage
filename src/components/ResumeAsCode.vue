@@ -1,8 +1,8 @@
 <template>
-  <q-card>
-    <q-card-section class="q-pa-xl">
+  <q-card flat square>
+    <div class="q-pa-xl">
       <prism lang="javascript" :code="code" />
-    </q-card-section>
+    </div>
   </q-card>
 </template>
 
@@ -23,3 +23,15 @@ export default {
   }
 };
 </script>
+
+<style lang="stylus" scoped>
+@import '../styles/quasar.variables'
+
+.q-card {
+    background-color: $code-bkg;
+    overflow-y: hidden;
+}
+::v-deep code {
+    white-space: pre-wrap;
+}
+</style>
