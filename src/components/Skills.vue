@@ -8,6 +8,7 @@
       <q-list class="col-grow col-7">
         <q-item-label header class="text-dark">Why</q-item-label>
         <q-expansion-item
+          expand-separator
           class="text-accent"
           dense
           group="skills.softskills"
@@ -31,6 +32,7 @@
       <q-list class="col-grow col-6 col-md-5">
         <q-item-label header class="text-dark">Languages</q-item-label>
         <q-expansion-item
+          expand-separator
           class="text-accent"
           dense
           group="skills.languages"
@@ -54,6 +56,7 @@
       <q-list class="col-grow col-6 col-md-5">
         <q-item-label header class="text-dark">Frameworks</q-item-label>
         <q-expansion-item
+          expand-separator
           class="text-accent"
           dense
           group="skills.tools"
@@ -77,6 +80,7 @@
       <q-list class="col-grow col-6 col-md-5">
         <q-item-label header class="text-dark">Tools</q-item-label>
         <q-expansion-item
+          expand-separator
           class="text-accent"
           dense
           group="skills.frameworks"
@@ -100,6 +104,7 @@
       <q-list class="col-grow col-6 col-md-5">
         <q-item-label header class="text-dark">Miscellaneous</q-item-label>
         <q-expansion-item
+          expand-separator
           class="text-accent"
           dense
           group="skills.other"
@@ -134,6 +139,7 @@ export default {
       chosen: null
     };
   }
+  // TO-DO: separate accordion into component
   // TO-DO: make accordions ARIA-complacent:
   // https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
 };
