@@ -1,8 +1,13 @@
 <template>
-  <q-card flat class="row justify-start items-start content-start">
-    <div class="row q-pa-md">
+  <q-card flat>
+    <q-card-section align="center">
+      <span class="text-h3">Skills</span>
+    </q-card-section>
+    <q-separator inset />
+    <q-card-section class="row q-pa-md">
       <q-list bordered separator>
         <q-expansion-item
+          dense
           group="items"
           v-for="(item, index) in items"
           :key="index"
@@ -18,18 +23,18 @@
           </q-card>
         </q-expansion-item>
       </q-list>
-    </div>
+    </q-card-section>
   </q-card>
 </template>
 
 <script>
-import { skills } from "../data.json";
+import { skills } from "../data/data.json";
 
 export default {
   name: "Skills",
   data() {
     return {
-      items: skills,
+      items: skills.languages,
       chosen: null
     };
   },

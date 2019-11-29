@@ -11,6 +11,7 @@
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.4.3",
     "quasar": "^1.0.0",
+    "raw-loader": "^4.0.0",
     "rebuild": "^0.1.2",
     "vue": "^2.6.10",
     "vue-prismjs": "^1.2.0",

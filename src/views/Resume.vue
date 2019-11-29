@@ -1,5 +1,8 @@
 <template>
   <q-page>
+    <div class="row left-panel items-center">
+      <q-btn color="dark" icon="arrow_back_ios" @click="$router.push('/')" />
+    </div>
     <ResumeAsCode />
   </q-page>
 </template>
@@ -26,4 +29,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.left-panel {
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 1000;
+}
+</style>

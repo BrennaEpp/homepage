@@ -1,0 +1,45 @@
+{
+    "about" : "Into",
+    "skills": {
+        "languages": [
+            { "title": "C#", "description": "High level language.\nI learnt C# with Unity's scripting API in my first work term (at Ubisoft). I used it pretty much every day throughout the work term." },
+            { "title": "JavaScript", "description": "High level language used in web pages.\nI dove deeper into JavaScript in my second work term (at Payworks). I used it daily in my job." },
+            { "title": "C", "description": "Low level language.\nMost of my experience in C comes through school. I was first introduced to C in Programming Practices, in which I used it to implement a garbage-collector. I've had further exposure to C through Operating Systems and I am confident writing in C." },
+            { "title": "Java", "description": "High level language.\nFirst programming language I learnt (well, other than Processing and HTML). A lot of my course work is in Java." },
+            { "title": "HTML", "description": "Standard markup language for web pages.\nI've used HTML professionally while working for the Manitoba Government and during my second work term (at Payworks). I've used it for small projects/websites as well." },
+            { "title": "SCSS/CSS", "description": "Style sheet language used to describe the presentation of a markup language (HTML).\nI used this in conjunction with HTML at the Manitoba Government and during my second work term." },
+            { "title": "ShaderLab", "description": "Unity's language for writing shaders (shaders are part of the graphics pipeline, used to create realtime effects in 3D environments).\nI wrote various shaders using ShaderLab during my time at Ubisoft (work term 1)." },
+            { "title": "Python", "description": "High level non-compiled language. Apart from all the pseudocode I've ever written, which I'm counting as Python (ha,ha), I've used Python in some course work." },
+            { "title": "C++", "description": "Mid-level language.\nI've used it in some coursework. This is definitely one of my weakest languages in terms of knowledge." },
+            { "title": "Assembly", "description": "Low level.\nI learnt LC-3 in the Computer Systems course. Assembly is fun." }
+        ],
+        "frameworks": [
+            { "title": "Vue.js", "description": "Hleaerm." },
+            { "title": "Quasar", "description": "High leveb." },
+            { "title": "Cordova", "description": "Low levglC." },
+            { "title": "Bootstrap-vue", "description": "High lev"},
+            { "title": "SharePoint", "description": "High lev"}
+        ],
+        "tools": [
+            { "title": "Git", "description": "I have used git with GitHub, GitLab and Bitbucket/Stash." },
+            { "title": "Jira", "description": "High leveb." },
+            { "title": "Visual Studio", "description": "Low levglC." },
+            { "title": "VS Code", "description": "High lev"},
+            { "title": "Unity", "description": "High leveb." },
+            { "title": "Android Studio", "description": "Low levglC." },
+            { "title": "Vi", "description": "High lev"}
+        ],
+        "other": [
+            { "title": "Arduino", "description": "Hleaerm." },
+            { "title": "Computer hardware", "description": "I am by no means an expert in hardware, but I have built 2 PCs from parts." },
+            { "title": "Accessibility", "description": "Low levglC." },
+            { "title": "Design", "description": "High lev"}
+        ],
+        "softskills": [
+            { "title": "I always have initiative at work", "description": "There's always something that could be done, and I'm not bad at finding it. If you don't have a particular direction or task for me at any moment, I will look for areas of improvement in my work or around me. I demonstrated this skill at the Manitoba Goverment, where I received little direction, as well as at Payworks." },
+            { "title": "I'm a team player", "description": "I do not have all the answers, and I love feedback for my work. I can work with others to get work done." },
+            { "title": "I can lead a team", "description": "If I am confident I'm the best person for the job, I will take a leadership role. I can organize." },
+            { "title": "", "description": "High lev"}
+        ]
+    }
+}

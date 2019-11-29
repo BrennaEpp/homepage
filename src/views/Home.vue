@@ -2,7 +2,7 @@
   <q-page>
     <TitleCard ref="home" />
 
-    <q-toolbar ref="nav" class="bg-accent  q-px-xl">
+    <q-toolbar ref="nav" class="bg-accent q-px-xl">
       <q-tabs v-model="tab" stretch align="center">
         <q-tab name="home" label="Home" @click="scrollTo('home')" />
         <q-tab name="about" label="About" @click="scrollTo('about')" />
@@ -15,9 +15,12 @@
         />
       </q-tabs>
     </q-toolbar>
-    <About ref="about" />
-    <Skills ref="skills" />
-    <Contact ref="contact" />
+    <div class="main-content">
+      <About ref="about" class="q-pa-xl" />
+      <Skills ref="skills" class="q-pa-xl greyed" />
+      <Contact ref="contact" class="q-pa-xl" />
+    </div>
+    <img :src="require('../assets/negative-house.png')" />
   </q-page>
 </template>
 
@@ -59,11 +62,18 @@ export default {
         window.innerHeight - this.navHeight + "px";
     },
     handleScroll() {
+      // TO-DO: link tab selected to scroll area
       setTimeout(() => {
-        if (!this.sticky && window.scrollY > window.innerHeight - 100) {
+        if (
+          !this.sticky &&
+          window.scrollY > window.innerHeight - this.navHeight
+        ) {
           this.$refs.nav.$el.classList.add("sticky");
           this.sticky = true;
-        } else if (this.sticky && window.scrollY < window.innerHeight - 100) {
+        } else if (
+          this.sticky &&
+          window.scrollY < window.innerHeight - this.navHeight
+        ) {
           this.$refs.nav.$el.classList.remove("sticky");
           this.sticky = false;
         }
@@ -73,7 +83,10 @@ export default {
       this.$refs[ref].$el.scrollIntoView();
       scrollBy(0, -this.navHeight);
 
-      if (!this.sticky && window.scrollY > window.innerHeight - 100) {
+      if (
+        !this.sticky &&
+        window.scrollY > window.innerHeight - this.navHeight
+      ) {
         this.$refs.nav.$el.classList.add("sticky");
         this.sticky = true;
         scrollBy(0, -this.navHeight);
@@ -90,6 +103,22 @@ export default {
 .sticky {
   position: fixed;
   top: 0;
-  z-index: 2000;
+  z-index: 22000;
+}
+.main-content {
+  max-width: 800px;
+  margin: auto;
+}
+.greyed {
+  background-color: whitesmoke;
+}
+img {
+  margin: auto;
+  z-index: 1;
+  position: absolute;
+  bottom: -560px;
+  right: 0;
+
+  opacity: 50%;
 }
 </style>

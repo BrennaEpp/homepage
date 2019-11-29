@@ -26,7 +26,8 @@ import {
   QTab,
   QTabs,
   QCardSection,
-  QExpansionItem
+  QExpansionItem,
+  QSeparator
 } from "quasar";
 
 Vue.use(Quasar, {
@@ -50,7 +51,8 @@ Vue.use(Quasar, {
     QTab,
     QTabs,
     QCardSection,
-    QExpansionItem
+    QExpansionItem,
+    QSeparator
   },
   directives: { Ripple },
   plugins: {}

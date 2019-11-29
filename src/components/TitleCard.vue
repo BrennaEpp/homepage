@@ -1,8 +1,13 @@
 <template>
-  <q-card flat squared class="row justify-center items-center">
+  <q-card flat squared class="row text-center items-center">
+    <!-- <img :src="require('../assets/negative-house.png')" /> -->
     <div class="col">
-    <div class="row text-h1"> Brenna Epp </div>
-    <div class="row text-h2"> Computer Scientist</div>
+      <div class="row justify-center text-h1"><span> Brenna Epp </span></div>
+      <div class="row justify-center text-h2">
+        <span class="text-primary">
+          Computer Scientist
+        </span>
+      </div>
     </div>
   </q-card>
 </template>
@@ -19,3 +24,22 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+img {
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.5)),
+    to(rgba(0, 0, 0, 0))
+  );
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+div {
+  z-index: 2;
+}
+</style>

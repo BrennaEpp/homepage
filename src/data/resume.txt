@@ -1,0 +1,119 @@
+    // This is just for fun 
+    // You probably have my actual resume that is in a more readable format 
+
+    var industryExperience = [
+      {
+        company: ‘Payworks’,
+        position: ‘Labs Developer’,
+        dateFrom: new Date(2019, 9),
+        dateTo: new Date(2019, 12),
+        responsibilities: [
+          ‘Independently implemented a prototype for an application with focus on responsive design for mobile and web’,
+          ‘Researched technologies, libraries and frameworks to test, build, and style the application’
+        ]
+      },
+      {
+        company: ‘Ubisoft’,
+        position: ‘Tools Programmer’,
+        dateFrom: new Date(2019, 1),
+        dateTo: new Date(2019, 4),
+        responsibilities: [
+          ‘Co-built a working prototype for a virtual reality tool from the ground up in an agile SCRUM environment’,
+          ‘Programmed features in C# and ShaderLab to fulfill project requirements, collaborating with studio artists and designers for an improved user experience’,
+          ‘Participated in code reviews and Git merge requests to ensure quality code’
+        ]
+      },
+      {
+        company: ‘Manitoba Government’,
+        position: ‘Virtual Meeting Services Support’,
+        dateFrom: new Date(2016, 5),
+        dateTo: new Date(2017, 8),
+        responsibilities: [
+          ‘Assisted with the successful launch and maintenance of a new department-wide intranet’,
+          ‘Translated an internal handbook to web format to reduce duplication and outdated instructions’,
+          ‘Designed guides and references for employees to ease the transition from the old meeting software to the new one’
+        ]
+      }
+    ];
+
+    var otherWorkExperience = [
+      {
+        company: ‘Elections Manitoba’,
+        position: ‘Assistant Voting Officer’,
+        dateFrom: new Date(2016, 4),
+        dateTo: new Date(2016, 4),
+        responsibilities: [
+          ‘Greeted voters at the voting station’,
+          ‘Recorded voters' names and any oaths taken in the voting book in an organized fashion’,
+          ‘Assisted at the voting station with the counting of ballots’
+        ]
+      },
+      {
+        company: ‘Elections Manitoba’,
+        position: ‘Enumerator’,
+        dateFrom: new Date(2016, 2),
+        dateTo: new Date(2016, 3),
+        responsibilities: [
+          ‘Gathered information of all eligible voters in the assigned area (door-to-door visits)’,
+          ‘Coordinated with the Returning Office and kept records of all addresses enumerated and not enumerated’
+        ]
+      },
+      {
+        company: ‘Safeway’,
+        position: ‘Bakery Clerk’,
+        dateFrom: new Date(2014, 6),
+        dateTo: new Date(2014, 12),
+        responsibilities: [
+          ‘Attended customers’ questions, assisted with product selection and collected orders’,
+          ‘Packaged and labeled baked goods for sale’,
+          ‘Restocked showcases and ensured bakery products were properly displayed and rotated’
+        ]
+      }
+    ];
+
+    var education = {
+      university: {
+        institution: ‘University of Manitoba’,
+        degree: ‘Bachelor of Computer Science, Honours (Co-op)’,
+        graduation: new Date(2020, 12),
+        GPA: 4.08 // out of 4.5
+      },
+      highSchool: {
+        institution: ‘Colegio Rodrigo Hernández Vargas’,
+        graduation: new Date(2013, 12),
+        gradeAverage: 99 // I don't actually remember, but I'm sure it was between 99-100 (out of 100)
+      }
+    };
+
+    var programmingLanguages = [
+      ‘C#’,
+      ‘C’,
+      ‘JavaScript’,
+      ‘Java’,
+      ‘ShaderLab’,
+      ‘HTML’,
+      ‘SCSS’,
+      ‘CSS’,
+      ‘C++’,
+      ‘Python’,
+      ‘Assembly’
+    ];
+    var frameworks = [‘Vue.js’, ‘Quasar’, ‘Cordova’, ‘Bootstrap-Vue’];
+    var tools = [
+      ‘Git’,
+      ‘Jira’,
+      ‘Confluence’,
+      ‘Visual Studio’,
+      ‘VS Code’,
+      ‘Eclipse’,
+      ‘Vi’,
+      ‘Android Studio’,
+      ‘Unity’
+    ];
+    var languages = [‘Spanish’, ‘English’];
+
+    var BrennaEpp = new SoftwareDeveloper({
+      workExperience: { industryExperience, otherWorkExperience },
+      education: education,
+      skills: { frameworks, tools, programmingLanguages, languages }
+    });
