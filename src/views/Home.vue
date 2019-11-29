@@ -32,7 +32,6 @@ import TitleCard from "../components/TitleCard.vue";
 
 export default {
   name: "Home",
-
   components: {
     About,
     Contact,
@@ -47,6 +46,10 @@ export default {
     window.addEventListener("resize", this.handleWindowResize);
 
     this.navHeight = this.$refs.nav.$el.offsetHeight;
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("resize", this.handleWindowResize);
   },
   data() {
     return {
