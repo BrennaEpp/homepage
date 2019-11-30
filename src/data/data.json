@@ -20,7 +20,7 @@
             { "title": "SharePoint", "description": "Web-based content management platform", "details": "The intranet for the Manitoba Government was built in SharePoint. I wrote and edited a lot of content for the intranet and would post articles for others."}
         ],
         "tools": [
-            { "title": "Git", "description":"Version control.", "details": "I have used git from the command line with GitHub, GitLab and Bitbucket/Stash." },
+            { "title": "Git", "description":"Version control", "details": "I have used git from the command line with GitHub, GitLab and Bitbucket/Stash." },
             { "title": "Jira", "description": "Issue tracker for project management", "details": "I used Jira in my first work term to track my work during sprints and track the backlog. I used it minimally during my second work term." },
             { "title": "npm", "description": "Package manager for JavaScript", "details": "I made a BitBucket hosted package during my second work term, as well as using npm for module installs." },
             { "title": "Visual Studio", "description": "IDE", "details": "I've used it in school projects to write in C++ and I used it in my first work term to write C# code for Unity. I also use the merge functions regularly." },
