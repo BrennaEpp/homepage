@@ -1,6 +1,5 @@
 <template>
   <q-card flat squared class="row text-center items-center">
-    <!-- <img :src="require('../assets/negative-house.png')" /> -->
     <div class="col">
       <div class="row justify-center text-h1"><span> Brenna Epp </span></div>
       <div class="row justify-center text-h2">
@@ -25,21 +24,16 @@ export default {
 };
 </script>
 
-<style scoped>
-img {
-  z-index: -100;
-  position: fixed;
-  top: 0;
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
+<style lang="stylus"  scoped>
+
 div {
   z-index: 2;
+}
+
+.q-card {
+  height: 100%;
+  width: 100%;
+  background: url("../assets/circuits.png") no-repeat center top local;
+  background-size: cover;
 }
 </style>
