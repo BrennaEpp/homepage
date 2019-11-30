@@ -24,12 +24,7 @@ export default {
 };
 </script>
 
-<style lang="stylus"  scoped>
-
-div {
-  z-index: 2;
-}
-
+<style lang="stylus" scoped>
 .q-card {
   height: 100%;
   width: 100%;

@@ -118,7 +118,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .q-tabs {
   width: 100%;
 }
@@ -140,6 +140,6 @@ img {
   position: absolute;
   bottom: -560px;
   right: 0;
-  opacity: 50% !important;
+  opacity: 0.5;
 }
 </style>

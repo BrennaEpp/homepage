@@ -29,6 +29,5 @@ export default {
 
 .q-card {
     background-color: $code-bkg;
-    overflow-y: hidden;
 }
 </style>
