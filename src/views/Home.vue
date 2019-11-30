@@ -136,10 +136,10 @@ export default {
 }
 img {
   margin: auto;
-  z-index: 10000;
+  z-index: 1;
   position: absolute;
   bottom: -560px;
   right: 0;
-  opacity: 50%;
+  opacity: 50% !important;
 }
 </style>
