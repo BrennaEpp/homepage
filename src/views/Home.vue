@@ -136,7 +136,7 @@ export default {
 }
 img {
   margin: auto;
-  z-index: 1;
+  z-index: 10000;
   position: absolute;
   bottom: -560px;
   right: 0;
