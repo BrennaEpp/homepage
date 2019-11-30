@@ -1,6 +1,6 @@
 <template>
   <q-card flat square>
-    <div class="q-pa-xl">
+    <div class="q-py-xl q-pl-xl">
       <prism lang="javascript" :code="code" />
     </div>
   </q-card>
