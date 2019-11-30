@@ -1,12 +1,39 @@
 <template>
   <q-card flat squared>
-    contac
-    <p v-for="n in 5" :key="n">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil
-      praesentium molestias a adipisci, dolore vitae odit, quidem consequatur
-      optio voluptates asperiores pariatur eos numquam rerum delectus commodi
-      perferendis voluptate?
-    </p>
+    <q-card-section align="center">
+      <span class="text-h3 in-front">Contact</span>
+    </q-card-section>
+    <q-separator inset />
+    <q-card-section class="in-front" align="center">
+      <div class="col">
+        <q-btn
+          flat
+          color="primary"
+          icon="mail"
+          label="BrennaNatashaEpp@gmail.com"
+          type="a"
+          href="mailto:brennanatashaepp@gmail.com"
+        />
+      </div>
+      <div class="col">
+        <q-btn
+          flat
+          color="primary"
+          icon="fab fa-linkedin"
+          label="LinkedIn"
+          type="a"
+          href="https://www.linkedin.com/in/brenna-epp-1b9b82140"
+        />
+        <q-btn
+          flat
+          color="primary"
+          icon="fab fa-github"
+          label="GitHub"
+          type="a"
+          href="https://github.com/BrennaEpp"
+        />
+      </div>
+    </q-card-section>
   </q-card>
 </template>
 
@@ -15,10 +42,15 @@ export default {
   name: "Contact",
   data() {
     return {
-      tab: null,
-      navHeight: 0,
-      sticky: false
+      text: 2
     };
   }
 };
 </script>
+
+<style scoped>
+.in-front {
+  position: relative;
+  z-index: 1000;
+}
+</style>

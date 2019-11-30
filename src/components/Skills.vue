@@ -1,58 +1,48 @@
 <template>
-  <q-card flat class="row justify-start items-start content-start">
- 
-  <div class="row q-pa-md">
-    <q-list bordered separator>
+  <q-card flat>
+    <q-card-section align="center">
+      <span class="text-h3">Skills</span>
+    </q-card-section>
+    <q-separator inset />
+    <q-card-section class="row q-pa-md q-gutter-lg justify-between">
+      <q-list class="col-grow col-7">
+        <skills-accordion
+          header="Soft skills i.e. why you should hire me"
+          :items="skills.softskills"
+        />
+      </q-list>
 
-    <q-expansion-item group="items" v-for="(item, index) in items" :key=index clickable v-ripple @click="chosen = item" :label="item.title">
-         
-         <q-card class="bg-grey-4">
-          <q-card-section>
-            {{ item.description }} 
-          </q-card-section>
-         </q-card>
-         </q-expansion-item>
-    
-    </q-list>
+      <q-list class="col-grow col-6 col-md-5">
+        <skills-accordion header="Languages" :items="skills.languages" />
+      </q-list>
+      <q-list class="col-grow col-6 col-md-5">
+        <skills-accordion header="Tools" :items="skills.tools" />
+      </q-list>
 
+      <q-list class="col-grow col-6 col-md-5">
+        <skills-accordion header="Frameworks" :items="skills.frameworks" />
+      </q-list>
 
-  </div>
-
+      <q-list class="col-grow col-6 col-md-5">
+        <skills-accordion header="Miscellaneous" :items="skills.other" />
+      </q-list>
+    </q-card-section>
   </q-card>
 </template>
 
 <script>
+import { skills } from "../data/data.json";
+import SkillsAccordion from "./SkillsAccordion.vue";
+
 export default {
   name: "Skills",
-  data() {
-      return {
-          items: [
-              {title: "Quasar", description: "Framework of components"},
-              {title: "Cordova", description: "Mobile app maker"},
-              {title: "Quasar1", description: "Framework of components1"},
-              {title: "Cordova1", description: "Mobile app maker1"}
-          ],
-          chosen: null
-      }
+  components: {
+    SkillsAccordion
   },
-  computed: {
-      firstList() {
-          return this.items.slice(0, this.items.length/2);
-      },
-      secondList() {
-          return this.items.slice(this.items.length/2);
-      }
+  data() {
+    return {
+      skills: skills
+    };
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.chosen-item {
-    background-color: azure;
-}
-.description {
-    background-color: azure;
-    min-width: 50%;
-
-}
-</style>

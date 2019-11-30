@@ -2,18 +2,29 @@
   <q-page>
     <TitleCard ref="home" />
 
-    <q-toolbar ref="nav" class="bg-accent  q-px-xl">
+    <q-toolbar ref="nav" class="bg-accent q-px-xl">
       <q-tabs v-model="tab" stretch align="center">
-        <q-tab name="home" label="Home" @click="scrollTo('home')" />
-        <q-tab name="about" label="About" @click="scrollTo('about')" />
-        <q-tab name="skills" label="Skills" @click="scrollTo('skills')" />
-        <q-tab name="contact" label="Contact" @click="scrollTo('contact')" />
-        <q-tab name="tab3" label="Resume in code" />
+        <q-tab name="home" label="Home" @click="smoothScroll('home')" />
+        <q-tab name="about" label="About" @click="smoothScroll('about')" />
+        <q-tab name="skills" label="Skills" @click="smoothScroll('skills')" />
+        <q-tab
+          name="contact"
+          label="Contact"
+          @click="smoothScroll('contact')"
+        />
+        <q-tab
+          name="resume"
+          label="Resume in code"
+          @click="$router.push({ name: 'resume' })"
+        />
       </q-tabs>
     </q-toolbar>
-    <About ref="about" />
-    <Skills ref="skills" />
-    <Contact ref="contact" />
+    <div class="main-content">
+      <About id="about" ref="about" class="q-pa-xl" />
+      <Skills id="skills" ref="skills" class="q-pa-xl greyed" />
+      <Contact ref="contact" class="q-pa-xl" />
+    </div>
+    <img :src="require('../assets/negative-house.png')" />
   </q-page>
 </template>
 
@@ -22,10 +33,10 @@ import About from "../components/About.vue";
 import Contact from "../components/Contact.vue";
 import Skills from "../components/Skills.vue";
 import TitleCard from "../components/TitleCard.vue";
+import { smoothScroll } from "../utils/smoothScroll";
 
 export default {
   name: "Home",
-
   components: {
     About,
     Contact,
@@ -33,13 +44,17 @@ export default {
     TitleCard
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
+    this.navHeight = this.$refs.nav.$el.offsetHeight;
 
     this.$refs.home.$el.style.height =
-      window.innerHeight - this.$refs.nav.$el.offsetHeight + "px";
-    window.addEventListener("resize", this.handleWindowResize);
+      window.innerHeight - this.navHeight + "px";
 
-    this.navHeight = this.$refs.nav.$el.offsetHeight;
+    window.addEventListener("resize", this.handleWindowResize);
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("resize", this.handleWindowResize);
   },
   data() {
     return {
@@ -48,32 +63,56 @@ export default {
       sticky: false
     };
   },
-  computed: {},
   methods: {
     handleWindowResize() {
       this.$refs.home.$el.style.height =
         window.innerHeight - this.navHeight + "px";
+      this.navHeight = this.$refs.nav.$el.offsetHeight;
     },
     handleScroll() {
       setTimeout(() => {
-        if (!this.sticky && window.scrollY > window.innerHeight - 100) {
+        if (
+          !this.sticky &&
+          window.scrollY > window.innerHeight - this.navHeight / 2
+        ) {
           this.$refs.nav.$el.classList.add("sticky");
           this.sticky = true;
-        } else if (this.sticky && window.scrollY < window.innerHeight - 100) {
+        } else if (
+          this.sticky &&
+          window.scrollY < window.innerHeight - this.navHeight / 2
+        ) {
           this.$refs.nav.$el.classList.remove("sticky");
           this.sticky = false;
         }
+        this.linkSelectedTabToScrollPos();
       }, 50);
     },
-    scrollTo(ref) {
-      this.$refs[ref].$el.scrollIntoView();
-      scrollBy(0, -this.navHeight);
-
-      if (!this.sticky && window.scrollY > window.innerHeight - 100) {
-        this.$refs.nav.$el.classList.add("sticky");
-        this.sticky = true;
-        scrollBy(0, -this.navHeight);
+    linkSelectedTabToScrollPos() {
+      var tabs = ["home", "about", "skills", "contact"];
+      for (let tab of tabs) {
+        if (
+          this.$refs[tab] &&
+          window.scrollY > this.$refs[tab].$el.offsetTop - 250
+        ) {
+          this.tab = tab;
+        } else {
+          break;
+        }
       }
+    },
+    smoothScroll(ref) {
+      var el = this.$refs[ref].$el;
+      if (!el) {
+        return;
+      }
+
+      let offset = 0;
+      // TO-DO: there's some kinks here; look into them
+      if (!this.sticky) {
+        offset = -this.navHeight;
+      }
+
+      smoothScroll(el, offset);
     }
   }
 };
@@ -86,6 +125,21 @@ export default {
 .sticky {
   position: fixed;
   top: 0;
-  z-index: 2000;
+  z-index: 22000;
+}
+.main-content {
+  max-width: 800px;
+  margin: auto;
+}
+.greyed {
+  background-color: whitesmoke;
+}
+img {
+  margin: auto;
+  z-index: 1;
+  position: absolute;
+  bottom: -560px;
+  right: 0;
+  opacity: 50%;
 }
 </style>
