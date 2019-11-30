@@ -6,7 +6,9 @@
     <q-separator inset />
     <q-card-section class="row q-pa-md q-gutter-lg justify-between">
       <q-list class="col-grow col-7">
-        <q-item-label header class="text-dark">Why</q-item-label>
+        <q-item-label header class="text-dark"
+          >Soft skills a.k.a why you should hire me</q-item-label
+        >
         <q-expansion-item
           expand-separator
           class="text-accent"

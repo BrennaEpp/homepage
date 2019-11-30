@@ -11,7 +11,6 @@
 <script>
 // TO-DOs:
 // Style home page
-// Style resume code colours
 export default {
   name: "LayoutDefault",
   data() {

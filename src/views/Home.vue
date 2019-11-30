@@ -4,10 +4,14 @@
 
     <q-toolbar ref="nav" class="bg-accent q-px-xl">
       <q-tabs v-model="tab" stretch align="center">
-        <q-tab name="home" label="Home" @click="scrollTo('home')" />
-        <q-tab name="about" label="About" @click="scrollTo('about')" />
-        <q-tab name="skills" label="Skills" @click="scrollTo('skills')" />
-        <q-tab name="contact" label="Contact" @click="scrollTo('contact')" />
+        <q-tab name="home" label="Home" @click="smoothScroll('home')" />
+        <q-tab name="about" label="About" @click="smoothScroll('about')" />
+        <q-tab name="skills" label="Skills" @click="smoothScroll('skills')" />
+        <q-tab
+          name="contact"
+          label="Contact"
+          @click="smoothScroll('contact')"
+        />
         <q-tab
           name="resume"
           label="Resume in code"
@@ -16,8 +20,8 @@
       </q-tabs>
     </q-toolbar>
     <div class="main-content">
-      <About ref="about" class="q-pa-xl" />
-      <Skills ref="skills" class="q-pa-xl greyed" />
+      <About id="about" ref="about" class="q-pa-xl" />
+      <Skills id="skills" ref="skills" class="q-pa-xl greyed" />
       <Contact ref="contact" class="q-pa-xl" />
     </div>
     <img :src="require('../assets/negative-house.png')" />
@@ -29,6 +33,7 @@ import About from "../components/About.vue";
 import Contact from "../components/Contact.vue";
 import Skills from "../components/Skills.vue";
 import TitleCard from "../components/TitleCard.vue";
+import { smoothScroll } from "../utils/smoothScroll";
 
 export default {
   name: "Home",
@@ -66,17 +71,16 @@ export default {
       this.navHeight = this.$refs.nav.$el.offsetHeight;
     },
     handleScroll() {
-      // TO-DO: smooth out scrolling
       setTimeout(() => {
         if (
           !this.sticky &&
-          window.scrollY > window.innerHeight - this.navHeight
+          window.scrollY > window.innerHeight - this.navHeight / 2
         ) {
           this.$refs.nav.$el.classList.add("sticky");
           this.sticky = true;
         } else if (
           this.sticky &&
-          window.scrollY < window.innerHeight - this.navHeight
+          window.scrollY < window.innerHeight - this.navHeight / 2
         ) {
           this.$refs.nav.$el.classList.remove("sticky");
           this.sticky = false;
@@ -98,18 +102,19 @@ export default {
         }
       }
     },
-    scrollTo(ref) {
-      this.$refs[ref].$el.scrollIntoView();
-      scrollBy(0, -this.navHeight);
-
-      if (
-        !this.sticky &&
-        window.scrollY > window.innerHeight - this.navHeight
-      ) {
-        this.$refs.nav.$el.classList.add("sticky");
-        this.sticky = true;
-        scrollBy(0, -this.navHeight);
+    smoothScroll(ref) {
+      var el = this.$refs[ref].$el;
+      if (!el) {
+        return;
       }
+
+      let offset = 0;
+      //TO-DO: there's some kinks here; look into them
+      if (!this.sticky) {
+        offset = -this.navHeight;
+      }
+
+      smoothScroll(el, offset);
     }
   }
 };
@@ -137,7 +142,6 @@ img {
   position: absolute;
   bottom: -560px;
   right: 0;
-
   opacity: 50%;
 }
 </style>

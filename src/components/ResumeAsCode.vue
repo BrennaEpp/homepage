@@ -31,7 +31,4 @@ export default {
     background-color: $code-bkg;
     overflow-y: hidden;
 }
-::v-deep code {
-    white-space: pre-wrap;
-}
 </style>
