@@ -1,0 +1,47 @@
+{
+    "skills": {
+        "languages": [
+            { "title": "C#", "description": "High level language", "details": "I learnt C# with Unity's scripting API in my first work term (at Ubisoft). I used it pretty much every day throughout the work term." },
+            { "title": "JavaScript", "description": "High level language used in web pages", "details": "I dove deeper into JavaScript in my second work term (at Payworks). I used it daily in my job." },
+            { "title": "C", "description": "Low level language", "details": "Most of my experience in C comes through school. I was first introduced to C in Programming Practices, in which I used it to implement a garbage-collector. I've had further exposure to C through Operating Systems and I am confident writing in C." },
+            { "title": "Java", "description": "High level language", "details": "First programming language I learnt (well, other than Processing and HTML). A lot of my course work is in Java. I have used Java to develop for Android as well." },
+            { "title": "HTML", "description": "Standard markup language for web pages", "details": "I've used HTML professionally while working for the Manitoba Government and during my second work term (at Payworks). I've used it for small projects/websites as well." },
+            { "title": "SCSS/CSS", "description": "Style sheet language used to describe the presentation of a markup language (HTML)", "details": "I used this in conjunction with HTML at the Manitoba Government and during my second work term." },
+            { "title": "ShaderLab", "description": "Unity's language for writing shaders (shaders are part of the graphics pipeline, used to create realtime effects in 3D environments)", "details": "I wrote various shaders using ShaderLab during my time at Ubisoft (work term 1)." },
+            { "title": "Python", "description": "High level non-compiled language", "details": "Apart from all the pseudocode I've ever written, which I'm counting as Python (ha,ha), I've used Python in some course work." },
+            { "title": "C++", "description": "Mid-level language", "details": "I've used it in some coursework. This is definitely one of my weakest languages in terms of knowledge." },
+            { "title": "Assembly", "description": "Low level", "details": "I learnt LC-3 in the Computer Systems course. Assembly is fun." }
+        ],
+        "frameworks": [
+            { "title": "Vue.js", "description": "Javascript front-end framework", "details": "This website was built using Vue. I wrote code in Vue during my second work term." },
+            { "title": "Quasar", "description": "Vue.js based framework for deploying apps across platforms", "details": "I used Quasar extensively during my second work term." },
+            { "title": "Cordova", "description": "Framework for mobile development using standard web technologies (HTML, JavaScript); integrated into Quasar", "details": "I explored using Cordova to deploy web-apps to mobile during my second work term (as well as using it through Quasar)." },
+            { "title": "Bootstrap-vue", "description": "Front-end styling and component library for Vue applications", "details": "I integrated existing Bootstrap-vue styling into a project and used components in different projects."},
+            { "title": "SharePoint", "description": "Web-based content management platform", "details": "The intranet for the Manitoba Government was built in SharePoint. I wrote and edited a lot of content for the intranet and would post articles for others."}
+        ],
+        "tools": [
+            { "title": "Git", "description":"Version control.", "details": "I have used git from the command line with GitHub, GitLab and Bitbucket/Stash." },
+            { "title": "Jira", "description": "Issue tracker for project management", "details": "I used Jira in my first work term to track my work during sprints and track the backlog. I used it minimally during my second work term." },
+            { "title": "npm", "description": "Package manager for JavaScript", "details": "I made a BitBucket hosted package during my second work term, as well as using npm for module installs." },
+            { "title": "Visual Studio", "description": "IDE", "details": "I've used it in school projects to write in C++ and I used it in my first work term to write C# code for Unity. I also use the merge functions regularly." },
+            { "title": "VS Code", "description": "IDE", "details": "I used VS Code during my second work term for Vue projects."},
+            { "title": "Unity", "description": "Game engine", "details": "I've used Unity to develop games and tools, including using it to develop for Virtual Reality for Oculus." },
+            { "title": "Android Studio", "description": "IDE for developing Android apps" },
+            { "title": "Eclipse", "description": "IDE", "details": "My current choice of IDE for Java projects."},
+            { "title": "Vi", "description": "Text editor for Unix", "details": "I've written most of my C code in Vi."}
+        ],
+        "other": [
+            { "title": "Oculus", "description":"VR (virtual reality) platform", "details": "I developed for the Oculus Rift during my work term at Ubisoft." },
+            { "title": "Arduino", "details": "I've done small projects on my Arduino." },
+            { "title": "Computer hardware", "details": "I am by no means an expert in hardware, but I have built 2 PCs from parts." },
+            { "title": "Web accessibility", "details": "I learnt about web accessibility and ARIA standards during my second work term and now I try to keep it in mind when developing." },
+            { "title": "Design", "details": "I can by no means claim professional level design skills, but I am interested in design and thus I have spent time reading articles and books on the topic. I especially appreaciate design that is clear and results in easy-to-use applications."}
+        ],
+        "softskills": [
+            { "title": "I always have initiative at work", "description": "There's always something that could be done, and I'm not bad at finding it. If you don't have a particular direction or task for me at any moment, I will look for areas of improvement in my work or around me. I demonstrated this skill at the Manitoba Goverment, where I received little direction, as well as at Payworks." },
+            { "title": "I'm a team player", "description": "I love feedback for my work and I love taking into account others' opinions and perspectives. I can work with others to get work done." },
+            { "title": "I can lead a team", "description": "If I am confident I'm the best person for the job, I will take a leadership role. I have been the organizer and leader of almost all my groups for schoolwork in highschool and University. I try to play to people's strengths and interests, and coordinate for a cohesive final product." },
+            { "title": "I am flexible", "description": "I like to be positive and open :) Though of course I like cutting edge work (who doesn't?), I don't mind doing \"grunt work\" or less appealing tasks."}
+        ]
+    }
+}

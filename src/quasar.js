@@ -5,7 +5,7 @@ import "quasar/dist/quasar.ie.polyfills";
 import "@quasar/extras/roboto-font/roboto-font.css";
 import "@quasar/extras/material-icons/material-icons.css";
 import "@quasar/extras/fontawesome-v5/fontawesome-v5.css";
-import { Ripple } from 'quasar'
+import { Ripple, TouchSwipe } from "quasar";
 import {
   Quasar,
   QLayout,
@@ -26,7 +26,8 @@ import {
   QTab,
   QTabs,
   QCardSection,
-  QExpansionItem
+  QExpansionItem,
+  QSeparator
 } from "quasar";
 
 Vue.use(Quasar, {
@@ -50,8 +51,9 @@ Vue.use(Quasar, {
     QTab,
     QTabs,
     QCardSection,
-    QExpansionItem
+    QExpansionItem,
+    QSeparator
   },
-  directives: { Ripple },
+  directives: { Ripple, TouchSwipe },
   plugins: {}
 });
