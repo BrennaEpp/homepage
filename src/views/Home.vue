@@ -44,13 +44,13 @@ export default {
     TitleCard
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
+    this.navHeight = this.$refs.nav.$el.offsetHeight;
 
     this.$refs.home.$el.style.height =
-      window.innerHeight - this.$refs.nav.$el.offsetHeight + "px";
-    window.addEventListener("resize", this.handleWindowResize);
+      window.innerHeight - this.navHeight + "px";
 
-    this.navHeight = this.$refs.nav.$el.offsetHeight;
+    window.addEventListener("resize", this.handleWindowResize);
+    window.addEventListener("scroll", this.handleScroll);
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -63,7 +63,6 @@ export default {
       sticky: false
     };
   },
-  computed: {},
   methods: {
     handleWindowResize() {
       this.$refs.home.$el.style.height =
@@ -93,8 +92,7 @@ export default {
       for (let tab of tabs) {
         if (
           this.$refs[tab] &&
-          window.scrollY + window.innerHeight / 2 >
-            this.$refs[tab].$el.offsetTop
+          window.scrollY > this.$refs[tab].$el.offsetTop - 250
         ) {
           this.tab = tab;
         } else {
@@ -109,7 +107,7 @@ export default {
       }
 
       let offset = 0;
-      //TO-DO: there's some kinks here; look into them
+      // TO-DO: there's some kinks here; look into them
       if (!this.sticky) {
         offset = -this.navHeight;
       }

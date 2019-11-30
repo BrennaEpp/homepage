@@ -23,7 +23,7 @@ export default {
 .q-page {
   height: 100%;
   width: 100%;
-  //TO-DO: colour pick an appropriate colour
+  // TO-DO: colour pick an appropriate colour
   background: #502f1c url("../assets/sad-kitty.jpg") no-repeat left top scroll;
   background-size: cover;
 }
@@ -34,7 +34,7 @@ export default {
 }
 .curved-start {
   // to visually line up curved letters
-  // nevermind, I kind of like the effect of over
+  // nevermind, I kind of like the effect
   margin-left: -100px;
 }
 </style>
