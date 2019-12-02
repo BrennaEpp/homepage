@@ -17,7 +17,7 @@
       v-model="slide"
       swipeable
       infinite
-      autoplay
+      :autoplay="7500"
       transition-prev="slide-right"
       transition-next="slide-left"
     >
