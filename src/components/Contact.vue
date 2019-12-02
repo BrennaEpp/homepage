@@ -39,12 +39,7 @@
 
 <script>
 export default {
-  name: "Contact",
-  data() {
-    return {
-      text: 2
-    };
-  }
+  name: "Contact"
 };
 </script>
 

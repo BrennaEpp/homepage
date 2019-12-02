@@ -20,8 +20,9 @@
       </q-tabs>
     </q-toolbar>
     <div class="main-content">
-      <About id="about" ref="about" class="q-pa-xl" />
-      <Skills id="skills" ref="skills" class="q-pa-xl greyed" />
+      <About ref="about" class="q-px-xl q-pt-xl" />
+      <Quotes class="q-pt-md q-pb-xl" />
+      <Skills ref="skills" class="q-pa-xl greyed" />
       <Contact ref="contact" class="q-pa-xl" />
     </div>
     <img :src="require('../assets/negative-house.png')" />
@@ -31,6 +32,7 @@
 <script>
 import About from "../components/About.vue";
 import Contact from "../components/Contact.vue";
+import Quotes from "../components/Quotes.vue";
 import Skills from "../components/Skills.vue";
 import TitleCard from "../components/TitleCard.vue";
 import { smoothScroll } from "../utils/smoothScroll";
@@ -40,6 +42,7 @@ export default {
   components: {
     About,
     Contact,
+    Quotes,
     Skills,
     TitleCard
   },

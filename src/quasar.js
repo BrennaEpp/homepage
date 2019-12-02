@@ -27,7 +27,10 @@ import {
   QTabs,
   QCardSection,
   QExpansionItem,
-  QSeparator
+  QSeparator,
+  QCarousel,
+  QCarouselControl,
+  QCarouselSlide
 } from "quasar";
 
 Vue.use(Quasar, {
@@ -52,7 +55,10 @@ Vue.use(Quasar, {
     QTabs,
     QCardSection,
     QExpansionItem,
-    QSeparator
+    QSeparator,
+    QCarousel,
+    QCarouselControl,
+    QCarouselSlide
   },
   directives: { Ripple, TouchSwipe },
   plugins: {}

@@ -1,7 +1,10 @@
 <template>
-  <q-card flat squared class="row text-center items-center">
+  <q-card flat squared class="row background-tint text-center items-center">
+    <!-- <img :src="require('../assets/negative-house.png')" /> -->
     <div class="col">
-      <div class="row justify-center text-h1"><span> Brenna Epp </span></div>
+      <div class="q-py-md row justify-center text-h1">
+        <span> Brenna Epp </span>
+      </div>
       <div class="row justify-center text-h2">
         <span class="text-primary">
           Computer Scientist
@@ -25,10 +28,21 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
+div {
+  z-index: 2;
+}
+
 .q-card {
   height: 100%;
   width: 100%;
-  background: url("../assets/circuits.png") no-repeat center top local;
+  // TO-DO: colour pick an appropriate colour
+  background: url("../assets/circuits.png") no-repeat left top scroll;
   background-size: cover;
 }
+
+// .background-tint {
+//   background-color: rgba(200,100,0,0.2); // Tint color
+//   background-blend-mode: normal;
+// }
 </style>

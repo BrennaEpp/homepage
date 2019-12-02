@@ -1,4 +1,12 @@
 {
+    "quotes": [
+        { "author":"Margaret Atwood", "quote": "the lost syllable for \"I\" that did not mean separate,\nall are becoming sounds no longer\nheard because no longer spoken"},
+        { "author": "William Butler Yeats", "quote": "Do you dance, Minnaloushe, do you dance?\nWhen two close kindred meet\nWhat better than call a dance,\nMaybe the moon may learn,"},
+        { "author": "John Green", "quote": "Both the wood and the carpenter will always have their imperfections; so, inevitably, all buildings will fall short of the way they're initially imagined - but even so, they can provide us shelter."},
+        { "author": "Emily Dickinson", "quote": "He questioned softly why I failed?\n“For beauty,” I replied.\n“And I for truth,—the two are one;\nWe brethren are,” he said."},
+        { "author": "Ariel Grue Lee", "quote": "In winter,\nsnow falls\nwithout permission.\n\nBut I let it fall anyway."},
+        { "author": "Antonio Machado", "quote": "En mi soledad\nhe visto cosas muy claras,\nque no son verdad."}
+    ],
     "skills": {
         "languages": [
             { "title": "C#", "description": "High level language", "details": "I learnt C# with Unity's scripting API in my first work term (at Ubisoft). I used it pretty much every day throughout the work term." },

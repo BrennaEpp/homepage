@@ -3,7 +3,7 @@
     <q-btn class="aria" type="a" href="/">Go to homepage</q-btn>
     <div
       aria-hidden="true"
-      class="row left-panel items-center justify-center q-pa-md"
+      class="row left-panel items-center justify-center q-py-md q-pl-md"
       v-ripple
       clickable
       @click="$router.push('/')"
