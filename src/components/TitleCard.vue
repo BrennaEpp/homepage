@@ -40,9 +40,4 @@ div {
   background: url("../assets/circuits.png") no-repeat left top scroll;
   background-size: cover;
 }
-
-// .background-tint {
-//   background-color: rgba(200,100,0,0.2); // Tint color
-//   background-blend-mode: normal;
-// }
 </style>

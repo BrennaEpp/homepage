@@ -43,7 +43,8 @@
             { "title": "Arduino", "details": "I've done small projects on my Arduino." },
             { "title": "Computer hardware", "details": "I am by no means an expert in hardware, but I have built 2 PCs from parts." },
             { "title": "Web accessibility", "details": "I learnt about web accessibility and ARIA standards during my second work term and now I try to keep it in mind when developing." },
-            { "title": "Design", "details": "I can by no means claim professional level design skills, but I am interested in design and thus I have spent time reading articles and books on the topic. I especially appreaciate design that is clear and results in easy-to-use applications."}
+            { "title": "Design", "details": "I can by no means claim professional level design skills, but I am interested in design and thus I have spent time reading articles and books on the topic. I especially appreaciate design that is clear and results in easy-to-use applications."},
+            { "title": "Gimp", "description":"Picture editing software", "details": "I used Gimp to create some of my avatars, as well as for elements in different school projects."}
         ],
         "softskills": [
             { "title": "I always have initiative at work", "description": "There's always something that could be done, and I'm not bad at finding it. If you don't have a particular direction or task for me at any moment, I will look for areas of improvement in my work or around me. I demonstrated this skill at the Manitoba Goverment, where I received little direction, as well as at Payworks." },

@@ -4,13 +4,12 @@
 
     <q-toolbar ref="nav" class="bg-accent q-px-xl">
       <q-tabs v-model="tab" stretch align="center">
-        <q-tab name="home" label="Home" @click="smoothScroll('home')" />
-        <q-tab name="about" label="About" @click="smoothScroll('about')" />
-        <q-tab name="skills" label="Skills" @click="smoothScroll('skills')" />
         <q-tab
-          name="contact"
-          label="Contact"
-          @click="smoothScroll('contact')"
+          v-for="tab in tabs"
+          :key="tab"
+          :name="tab"
+          :label="tab"
+          @click="smoothScroll(tab)"
         />
         <q-tab
           name="resume"
@@ -23,6 +22,7 @@
       <About ref="about" class="q-px-xl q-pt-xl" />
       <Quotes class="q-pt-md q-pb-xl" />
       <Skills ref="skills" class="q-pa-xl greyed" />
+      <ArtDisplay ref="sketches" class="q-pa-xl" />
       <Contact ref="contact" class="q-pa-xl" />
     </div>
     <img :src="require('../assets/negative-house.png')" />
@@ -31,6 +31,7 @@
 
 <script>
 import About from "../components/About.vue";
+import ArtDisplay from "../components/ArtDisplay.vue";
 import Contact from "../components/Contact.vue";
 import Quotes from "../components/Quotes.vue";
 import Skills from "../components/Skills.vue";
@@ -41,10 +42,19 @@ export default {
   name: "Home",
   components: {
     About,
+    ArtDisplay,
     Contact,
     Quotes,
     Skills,
     TitleCard
+  },
+  data() {
+    return {
+      tabs: ["home", "about", "skills", "sketches", "contact"],
+      tab: null,
+      navHeight: 0,
+      sticky: false
+    };
   },
   mounted() {
     this.navHeight = this.$refs.nav.$el.offsetHeight;
@@ -58,13 +68,6 @@ export default {
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
     window.removeEventListener("resize", this.handleWindowResize);
-  },
-  data() {
-    return {
-      tab: null,
-      navHeight: 0,
-      sticky: false
-    };
   },
   methods: {
     handleWindowResize() {
@@ -91,8 +94,7 @@ export default {
       }, 50);
     },
     linkSelectedTabToScrollPos() {
-      var tabs = ["home", "about", "skills", "contact"];
-      for (let tab of tabs) {
+      for (let tab of this.tabs) {
         if (
           this.$refs[tab] &&
           window.scrollY > this.$refs[tab].$el.offsetTop - 250
