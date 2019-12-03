@@ -25,7 +25,7 @@
       <About ref="about" class="q-px-xl q-pt-xl" />
       <Quotes class="q-pt-md q-pb-xl" />
       <Skills ref="skills" class="q-pa-xl greyed" />
-      <ArtDisplay ref="sketches" class="q-pt-xl q-px-xl"  />
+      <ArtDisplay ref="sketches" class="q-pt-xl q-px-xl" />
       <Contact ref="contact" class="q-pa-xl" />
     </div>
     <img :src="require('../assets/negative-house.png')" />
