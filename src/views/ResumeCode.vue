@@ -18,7 +18,7 @@
 import ResumeAsCode from "../components/ResumeAsCode.vue";
 
 export default {
-  name: "Resume",
+  name: "ResumeCode",
 
   components: {
     ResumeAsCode

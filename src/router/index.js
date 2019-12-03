@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Resume from "../views/Resume.vue";
+import ResumeCode from "../views/ResumeCode.vue";
 
 Vue.use(VueRouter);
 
@@ -12,9 +12,9 @@ const routes = [
     component: Home
   },
   {
-    path: "/resume",
-    name: "resume",
-    component: Resume
+    path: "/resumecode",
+    name: "resumecode",
+    component: ResumeCode
   }
 ];
 
@@ -25,6 +25,7 @@ routes.push({
 });
 
 const router = new VueRouter({
+  // mode: 'history',
   routes
 });
 

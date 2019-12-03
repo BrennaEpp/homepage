@@ -11,10 +11,13 @@
           :label="tab"
           @click="smoothScroll(tab)"
         />
+        <q-tab name="resume">
+          <a class="tab" href="../Resume.pdf" target="blank">Resume (pdf)</a>
+        </q-tab>
         <q-tab
-          name="resume"
+          name="resumecode"
           label="Resume in code"
-          @click="$router.push({ name: 'resume' })"
+          @click="$router.push({ name: 'resumecode' })"
         />
       </q-tabs>
     </q-toolbar>
@@ -146,5 +149,11 @@ img {
   bottom: -560px;
   right: 0;
   opacity: 0.5;
+}
+a.tab {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
+  font-weight: 500;
 }
 </style>

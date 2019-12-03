@@ -9,8 +9,6 @@
 </template>
 
 <script>
-// TO-DOs:
-// Style home page
 export default {
   name: "LayoutDefault",
   data() {
@@ -23,9 +21,9 @@ export default {
   },
   watch: {
     $route(to, from) {
-      if (to.name === "home" && from.name === "resume") {
+      if (to.name === "home" && from.name === "resumecode") {
         this.transitionName = "slide-right";
-      } else if (from.name === "home" && to.name === "resume") {
+      } else if (from.name === "home" && to.name === "resumecode") {
         this.transitionName = "slide-left";
       }
     }
