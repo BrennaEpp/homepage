@@ -63,4 +63,7 @@ export default {
     color: $dark;
     opacity: .5;
 }
+>>> .q-panel.scroll {
+  overflow: hidden;
+}
 </style>
