@@ -38,6 +38,6 @@ div {
   width: 100%;
   // TO-DO: colour pick an appropriate colour
   background: url("../assets/circuits.png") no-repeat left top scroll;
-  background-size: cover;
+  background-size: auto;
 }
 </style>
