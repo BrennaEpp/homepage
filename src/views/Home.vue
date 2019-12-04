@@ -2,7 +2,7 @@
   <q-page>
     <TitleCard ref="home" />
 
-    <q-toolbar ref="nav" class="bg-accent q-px-xl">
+    <q-toolbar ref="nav" class="bg-accent">
       <q-tabs v-model="tab" stretch align="center">
         <q-tab
           v-for="tab in tabs"
@@ -21,12 +21,12 @@
         />
       </q-tabs>
     </q-toolbar>
-    <div class="main-content">
-      <About ref="about" class="q-px-xl q-pt-xl" />
+    <div class="main-content q-mx-xl">
+      <About ref="about" class="q-pt-xl" />
       <Quotes class="q-pt-md q-pb-xl" />
       <Skills ref="skills" class="q-pa-xl greyed" />
-      <ArtDisplay ref="sketches" class="q-pt-xl q-px-xl" />
-      <Contact ref="contact" class="q-pa-xl" />
+      <ArtDisplay ref="sketches" class="q-mt-xl q-px-xl" />
+      <Contact ref="contact" />
     </div>
     <img :src="require('../assets/negative-house.png')" />
   </q-page>

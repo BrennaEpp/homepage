@@ -2,7 +2,7 @@
   <q-card flat squared class="row background-tint text-center items-center">
     <!-- <img :src="require('../assets/negative-house.png')" /> -->
     <div class="col">
-      <div class="q-py-md row justify-center text-h1">
+      <div class="q-my-md row justify-center text-h1">
         <span> Brenna Epp </span>
       </div>
       <div class="row justify-center text-h2">

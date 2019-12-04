@@ -12,8 +12,6 @@
       </q-card-section>
       <q-carousel
         control-color="dark"
-        
-        
         arrows
         animated
         v-model="slide"
