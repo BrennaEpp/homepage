@@ -7,7 +7,8 @@
     <q-card-section>
       <q-card-section align="center">
         <span class="text-dark"
-          >some of these are based off of characters I did not create</span
+          >Some of these are based off of characters I did not create – see if
+          you can recognize any!</span
         >
       </q-card-section>
       <q-carousel

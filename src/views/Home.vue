@@ -22,7 +22,7 @@
       </q-tabs>
     </q-toolbar>
     <div class="main-content q-mx-xl">
-      <About ref="about" class="q-pt-xl" />
+      <About ref="about" class="q-pt-xl q-pa-xl" />
       <Quotes class="q-pt-md q-pb-xl" />
       <Skills ref="skills" class="q-pa-xl greyed" />
       <ArtDisplay ref="sketches" class="q-mt-xl q-px-xl" />

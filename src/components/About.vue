@@ -4,7 +4,7 @@
       <span class="text-h3">About</span>
     </q-card-section>
     <q-separator inset />
-    <q-card-section>
+    <q-card-section style="white-space: pre-line">
       {{ text }}
     </q-card-section>
   </q-card>
