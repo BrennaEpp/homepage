@@ -12,7 +12,8 @@
       </q-card-section>
       <q-carousel
         control-color="dark"
-        height="37rem"
+        
+        
         arrows
         animated
         v-model="slide"
@@ -24,7 +25,7 @@
       >
         <q-carousel-slide v-for="index in 10" :name="index" :key="index">
           <q-card flat>
-            <img :src="require(`@/statics/arts/${index}.jpg`)" />
+            <img class="fit" :src="require(`@/statics/arts/${index}.jpg`)" />
           </q-card>
         </q-carousel-slide>
       </q-carousel>
@@ -42,3 +43,14 @@ export default {
   }
 };
 </script>
+
+<style lang="stylus" scoped>
+>>> .q-panel.scroll {
+  overflow: hidden;
+}
+@media (min-width: 750px) {
+  .q-carousel  {
+    height: 38rem;
+  }
+}
+</style>
